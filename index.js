@@ -10,9 +10,6 @@ async function fetchTodos() {
 
     const todos = await response.json();
     displayTodo(todos);
-
-    console.log("Fetched Todos:", todos);
-    return todos;
   } catch (error) {
     console.error("Error fetching todos:", error.message);
   }

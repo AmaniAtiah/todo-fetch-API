@@ -56,19 +56,15 @@ function updateTime() {
   var minutes = currentTime.getMinutes();
   var seconds = currentTime.getSeconds();
 
-  // Add leading zero if the value is less than 10
   hours = hours < 10 ? "0" + hours : hours;
   minutes = minutes < 10 ? "0" + minutes : minutes;
   seconds = seconds < 10 ? "0" + seconds : seconds;
 
   var timeString = hours + ":" + minutes + ":" + seconds;
 
-  // Update the content of the element with id "time"
   document.getElementById("time").innerHTML = timeString;
 }
 
-// Call updateTime every second (1000 milliseconds)
 setInterval(updateTime, 1000);
 
-// Call updateTime initially to set the initial time
 updateTime();
